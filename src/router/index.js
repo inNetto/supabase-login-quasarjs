@@ -1,5 +1,4 @@
 import { route } from "quasar/wrappers";
-import useAuthUser from "src/composables/UseAuthUser";
 import {
   createRouter,
   createMemoryHistory,
@@ -7,6 +6,7 @@ import {
   createWebHashHistory,
 } from "vue-router";
 import routes from "./routes";
+import useAuthUser from "src/composables/UseAuthUser";
 
 /*
  * If not building with SSR mode, you can
