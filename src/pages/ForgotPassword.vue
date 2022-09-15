@@ -1,7 +1,7 @@
 <template>
   <q-page padding>
     <q-form class="row justify-center" @submit.prevent="handleForgotPassowrd">
-      <p class="col-12 text-h5 text-center">Reset Password</p>
+      <p class="col-12 text-h5 text-center">Resetar Senha</p>
       <div class="col-md-4 col-sm-6 col-xs-10 q-gutter-y-md">
         <q-input
           label="Email"
@@ -13,7 +13,7 @@
 
         <div class="full-width q-pt-md q-gutter-y-sm">
           <q-btn
-            label="Send Reset Email"
+            label="Enviar Reset Email"
             color="primary"
             class="full-width"
             outline
@@ -47,7 +47,7 @@ export default defineComponent({
     const handleForgotPassowrd = async () => {
       try {
         await sendPasswordRestEmail(email.value);
-        notifySuccess(`Password reset email sent to: ${email.value}`);
+        notifySuccess(`Reset de senha enviado para: ${email.value}`);
       } catch (error) {
         notifyError(error.message);
       }

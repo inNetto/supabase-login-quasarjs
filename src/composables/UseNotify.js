@@ -5,14 +5,14 @@ export default function useNotify() {
   const notifySuccess = (message) => {
     $q.notify({
       type: "positive",
-      message: message || "All right !",
+      message: message || "Tudo certo !",
     });
   };
 
   const notifyError = (message) => {
     $q.notify({
       type: "negative",
-      message: message || "Failed !",
+      message: message || "Falhou !",
     });
   };
 

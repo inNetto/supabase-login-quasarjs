@@ -45,7 +45,11 @@ module.exports = configure(function (ctx) {
     // Full list of options: https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js#Property%3A-build
     build: {
       vueRouterMode: "history", // available values: 'hash', 'history'
-
+      env: {
+        SUPABASE_URL: "https://rnjhclxpooiddnubqhzd.supabase.co",
+        SUPABASE_KEY:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJuamhjbHhwb29pZGRudWJxaHpkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjE4NjMxNzcsImV4cCI6MTk3NzQzOTE3N30.bopDB8t7-9pfgB9uFDVa1ByxoGDJ4Zdt8Dv92aPZnyE",
+      },
       // transpile: false,
       // publicPath: '/',
 
@@ -144,9 +148,9 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: `Pelada do Morto`,
-        short_name: `Pelada do Morto`,
-        description: `Aplicativo de gerenciamento de pelada`,
+        name: `Login App`,
+        short_name: `LoginApp`,
+        description: `App de login usando Supabase pronto para usar`,
         display: "standalone",
         orientation: "portrait",
         background_color: "#ffffff",
@@ -209,7 +213,7 @@ module.exports = configure(function (ctx) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: "peladadomortoapp",
+        appId: "loginapp",
       },
 
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain

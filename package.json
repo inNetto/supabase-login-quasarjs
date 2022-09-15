@@ -1,8 +1,8 @@
 {
-  "name": "peladadomortoapp",
+  "name": "LoginSupabase",
   "version": "0.0.1",
-  "description": "Aplicativo de gerenciamento de pelada",
-  "productName": "Pelada do Morto",
+  "description": "App de login usando supabase pronto para usar",
+  "productName": "LoginApp",
   "author": "iNetto",
   "private": true,
   "scripts": {

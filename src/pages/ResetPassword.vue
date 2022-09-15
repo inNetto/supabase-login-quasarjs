@@ -4,15 +4,15 @@
       <p class="col-12 text-h5 text-center">Reset Password</p>
       <div class="col-md-4 col-sm-6 col-xs-10 q-gutter-y-md">
         <q-input
-          label="New Password"
+          label="Nova senha"
           v-model="password"
           lazy-rules
-          :rules="[(val) => (val && val.length >= 6) || 'Password is required']"
+          :rules="[(val) => (val && val.length >= 6) || 'Senha é requerida']"
         />
 
         <div class="full-width q-pt-md q-gutter-y-sm">
           <q-btn
-            label="Send New Password"
+            label="Enviar nova senha"
             color="primary"
             class="full-width"
             outline
@@ -42,7 +42,7 @@ export default defineComponent({
     const handlePasswordReset = async () => {
       try {
         await resetPassword(token, password.value);
-        notifySuccess("New Password Sent");
+        notifySuccess("Nova senha enviada");
         router.push({ name: "login" });
       } catch (error) {
         notifyError(error.message);

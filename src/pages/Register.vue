@@ -7,14 +7,14 @@
           label="Name"
           v-model="form.name"
           lazy-rules
-          :rules="[(val) => (val && val.length > 0) || 'Name is required']"
+          :rules="[(val) => (val && val.length > 0) || 'Nome é requerido']"
         />
 
         <q-input
           label="Email"
           v-model="form.email"
           lazy-rules
-          :rules="[(val) => (val && val.length > 0) || 'Email is required']"
+          :rules="[(val) => (val && val.length > 0) || 'Email é requerido']"
           type="email"
         />
 
@@ -25,7 +25,7 @@
           :rules="[
             (val) =>
               (val && val.length >= 6) ||
-              'Password is required and 6 characters',
+              'Senha é requerida com no mínimo 6 caracteres',
           ]"
         />
 

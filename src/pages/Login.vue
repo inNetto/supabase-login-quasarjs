@@ -7,7 +7,7 @@
           label="Email"
           v-model="form.email"
           lazy-rules
-          :rules="[(val) => (val && val.length > 0) || 'Email is required']"
+          :rules="[(val) => (val && val.length > 0) || 'Email é requerido']"
           type="email"
         />
 
@@ -15,7 +15,7 @@
           label="Password"
           v-model="form.password"
           lazy-rules
-          :rules="[(val) => (val && val.length > 0) || 'Password is required']"
+          :rules="[(val) => (val && val.length > 0) || 'Senha é requerido']"
         />
 
         <div class="full-width q-pt-md">
@@ -30,7 +30,7 @@
         </div>
         <div class="full-width q-gutter-y-sm">
           <q-btn
-            label="Register"
+            label="Registrar"
             color="primary"
             class="full-width"
             flat
@@ -38,7 +38,7 @@
             size="sm"
           />
           <q-btn
-            label="Forgot Password ?"
+            label="Esqueceu a senha ?"
             color="primary"
             class="full-width"
             flat
@@ -74,7 +74,7 @@ export default defineComponent({
     const handleLogin = async () => {
       try {
         await login(form.value);
-        notifySuccess("Login successfully!");
+        notifySuccess("Login realizado com sucesso!");
         router.push({ name: "me" });
       } catch (error) {
         notifyError(error.message);
